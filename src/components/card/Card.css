@@ -1,0 +1,23 @@
+.card {
+  height: 30vh;
+  max-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  margin: 20vh 10vw;
+  background-color: lightgray;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.flex-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+img {
+  width: auto;
+  height: 17vh;
+  border-radius: 50%;
+}
