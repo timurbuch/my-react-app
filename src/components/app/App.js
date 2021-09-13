@@ -1,13 +1,15 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Header from "../header/Header.js";
+import Footer from "../footer/Footer";
+import Card from "../card/Card";
 
 function App() {
-  console.log("test");
-  const name = "neue fische";
   return (
     <div className="App">
       <Header />
+      <Card />
+      <Footer />
     </div>
   );
 }
