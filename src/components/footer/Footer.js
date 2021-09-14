@@ -9,10 +9,10 @@ import sIcon from "../../assets/alpha-s-circle-outline.svg";
 function Footer() {
   return (
     <footer>
-      <NavLink src={gIcon} />
-      <NavLink src={hIcon} />
-      <NavLink src={rIcon} />
-      <NavLink src={sIcon} />
+      <NavLink src={gIcon} ariaLabel="Gryffindor" />
+      <NavLink src={hIcon} ariaLabel="Hufflepuff" />
+      <NavLink src={rIcon} ariaLabel="Ravenclaw" />
+      <NavLink src={sIcon} ariaLabel="Slytherin" />
     </footer>
   );
 }

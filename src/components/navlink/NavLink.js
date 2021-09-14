@@ -2,9 +2,9 @@ import "./NavLink.css";
 
 function NavLink(props) {
   return (
-    <a>
+    <button className="navLink" ariaLabel={props.ariaLabel}>
       <img className="navIcon" src={props.src} />
-    </a>
+    </button>
   );
 }
 
