@@ -1,8 +1,8 @@
 .main {
   min-height: 100vh;
   padding-top: 17vh;
-  padding-bottom: 15vh;
-  background-color: rgb(248, 247, 247);
+  padding-bottom: 17vh;
+  background-color: lightblue;
   display: flex;
   flex-direction: column;
   justify-content: center;
