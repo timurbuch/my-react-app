@@ -9,6 +9,7 @@ function Card(props) {
           <li>{props.gender}</li>
           <li>{props.dateOfBirth}</li>
           <li>{props.house}</li>
+          <button>Show more</button>
         </ul>
       </section>
     </div>
