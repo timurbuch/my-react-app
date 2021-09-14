@@ -31,6 +31,7 @@ function Main() {
       <main className="main">
         {characters.map((character) => (
           <Card
+            key={character.name}
             name={character.name}
             img={character.image}
             gender={character.gender}
