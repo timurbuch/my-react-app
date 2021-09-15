@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./Card.css";
+import EmojiBar from "../emojiBar/EmojiBar";
+
 function Card(props) {
   const [showDetails, setShowDetails] = useState(false);
   const [emoji, setEmoji] = useState("");
@@ -10,23 +12,7 @@ function Card(props) {
 
   return (
     <div className="card">
-      <div className="emojiBar">
-        <button className="emojiButton" onClick={() => handleEmojiCLick("🤓")}>
-          🤓
-        </button>
-        <button className="emojiButton" onClick={() => handleEmojiCLick("😱")}>
-          😱
-        </button>
-        <button className="emojiButton" onClick={() => handleEmojiCLick("🤡")}>
-          🤡
-        </button>
-        <button className="emojiButton" onClick={() => handleEmojiCLick("💀")}>
-          💀
-        </button>
-        <button className="emojiButton" onClick={() => handleEmojiCLick("🧙🏾‍♂️")}>
-          🧙🏾‍♂️
-        </button>
-      </div>
+      <EmojiBar handleEmojiCLick={handleEmojiCLick} />
       <h2>
         {emoji}
         {props.name}
