@@ -9,19 +9,18 @@ function Main() {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    fetch("http://hp-api.herokuapp.com/api/characters").then((res) =>
-      res.json()).then(
-        (result) => setCharacters(result))
-         .catch((error) => {
-          setError(error);
-        }
-      )
-    );
+    fetch("http://hp-api.herokuapp.com/api/characters")
+      .then((res) => res.json())
+      .then((result) => setCharacters(result))
+      .catch((error) => {
+        setError(error);
+      });
   }, []);
-    return (
-      <main className="main">
-        {error && <div>Error : {error.message}</div>}
-        {characters ? (characters.map((character) => (
+  return (
+    <main className="main">
+      {error && <div>Error : {error.message}</div>}
+      {characters ? (
+        characters.map((character) => (
           <Card
             key={character.name}
             name={character.name}
@@ -30,12 +29,12 @@ function Main() {
             dateOfBirth={character.dateOfBirth}
             house={character.house}
           />
-        ))) :
-        (<div>Loading...</div>)
-        }
-      </main>
-    );
-  }
+        ))
+      ) : (
+        <div>Loading...</div>
+      )}
+    </main>
+  );
 }
 
 export default Main;
