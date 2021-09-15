@@ -22,14 +22,10 @@ function Main() {
       )
     );
   }, []);
-  if (error) {
-    return <div>Error : {error.message}</div>;
-  } else if (!isLoaded) {
-    return <div>Loading...</div>;
-  } else {
     return (
       <main className="main">
-        {characters.map((character) => (
+        {error && <div>Error : {error.message}</div>}
+        {characters ? (characters.map((character) => (
           <Card
             key={character.name}
             name={character.name}
@@ -38,7 +34,9 @@ function Main() {
             dateOfBirth={character.dateOfBirth}
             house={character.house}
           />
-        ))}
+        ))) :
+        (<div>Loading...</div>)
+        }
       </main>
     );
   }
