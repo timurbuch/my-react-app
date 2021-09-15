@@ -21,8 +21,9 @@ function Card(props) {
             onClick={() => {
               setShowDetails(!showDetails);
             }}
+            className="showButton"
           >
-            Show more
+            Show {!showDetails ? "more" : "less"}
           </button>
         </div>
       </section>
