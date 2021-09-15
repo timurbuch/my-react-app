@@ -1,0 +1,9 @@
+.emojiBar {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+}
+.emojiButton {
+  background: transparent;
+  border: none;
+}
