@@ -5,16 +5,15 @@ import { useState, useEffect } from "react";
 
 function Main() {
   const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
     fetch("http://hp-api.herokuapp.com/api/characters")
       .then((res) => res.json())
-      .then((result) => setCharacters(result))
-      .catch((error) => {
-        setError(error);
-      });
+      .then(
+        (result) => setCharacters(result),
+        (error) => setError(error)
+      );
   }, []);
   return (
     <main className="main">
@@ -28,6 +27,7 @@ function Main() {
             gender={character.gender}
             dateOfBirth={character.dateOfBirth}
             house={character.house}
+            patronus={character.patronus}
           />
         ))
       ) : (
