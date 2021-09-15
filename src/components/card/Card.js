@@ -2,10 +2,35 @@ import { useState } from "react";
 import "./Card.css";
 function Card(props) {
   const [showDetails, setShowDetails] = useState(false);
+  const [emoji, setEmoji] = useState("");
+
+  const handleEmojiCLick = (input) => {
+    input !== emoji ? setEmoji(input) : setEmoji("");
+  };
 
   return (
     <div className="card">
-      <h2>{props.name}</h2>
+      <div className="emojiBar">
+        <button className="emojiButton" onClick={() => handleEmojiCLick("🤓")}>
+          🤓
+        </button>
+        <button className="emojiButton" onClick={() => handleEmojiCLick("😱")}>
+          😱
+        </button>
+        <button className="emojiButton" onClick={() => handleEmojiCLick("🤡")}>
+          🤡
+        </button>
+        <button className="emojiButton" onClick={() => handleEmojiCLick("💀")}>
+          💀
+        </button>
+        <button className="emojiButton" onClick={() => handleEmojiCLick("🧙🏾‍♂️")}>
+          🧙🏾‍♂️
+        </button>
+      </div>
+      <h2>
+        {emoji}
+        {props.name}
+      </h2>
       <h4>{props.house}</h4>
       <section className="flex-wrapper">
         <img src={props.img} alt={props.name} />
