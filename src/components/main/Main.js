@@ -10,13 +10,9 @@ function Main() {
 
   useEffect(() => {
     fetch("http://hp-api.herokuapp.com/api/characters").then((res) =>
-      res.json().then(
-        (result) => {
-          setIsLoaded(true);
-          setCharacters(result);
-        },
-        (error) => {
-          setIsLoaded(true);
+      res.json()).then(
+        (result) => setCharacters(result))
+         .catch((error) => {
           setError(error);
         }
       )
