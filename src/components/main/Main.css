@@ -1,0 +1,11 @@
+.main {
+  min-height: 100vh;
+  padding-top: 17vh;
+  padding-bottom: 17vh;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  gap: 2rem;
+}

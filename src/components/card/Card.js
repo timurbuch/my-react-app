@@ -1,17 +1,18 @@
 import "./Card.css";
-import img from "../../assets/placeholder.jpg";
-function Card() {
-  const name = "Hermione Granger";
+function Card(props) {
   return (
     <div className="card">
-      <h3>{name}</h3>
+      <h2>{props.name}</h2>
       <section className="flex-wrapper">
-        <img src={img} />
-        <ul>
-          <li>Placeholder</li>
-          <li>Placeholder</li>
-          <li>Placeholder</li>
-        </ul>
+        <img src={props.img} alt={props.name} />
+        <div className="text-wrapper">
+          <ul>
+            <li>{props.gender}</li>
+            <li>{props.dateOfBirth}</li>
+            <li>{props.house}</li>
+          </ul>
+          <button>Show more</button>
+        </div>
       </section>
     </div>
   );

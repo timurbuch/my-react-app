@@ -1,0 +1,9 @@
+.navIcon {
+  height: 7vh;
+  width: auto;
+  background-color: lightgray;
+}
+.navLink {
+  background: transparent;
+  border: none;
+}
