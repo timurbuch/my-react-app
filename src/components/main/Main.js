@@ -7,10 +7,6 @@ function Main(props) {
   const [error, setError] = useState(null);
   const [characters, setCharacters] = useState([]);
 
-  /*const filteredCharacters = props.buttonStatebuttonState
-    ? characters.filter((character) => character.house === props.buttonState)
-    : characters;*/
-
   useEffect(() => {
     fetch("http://hp-api.herokuapp.com/api/characters")
       .then((res) => res.json())
