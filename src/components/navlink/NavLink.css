@@ -6,6 +6,15 @@
   background: transparent;
   border: none;
 }
-.FooterButtonActive {
-  background-color: lightgray;
+.FooterButtonActive--Gryffindor {
+  background-color: #ae0001;
+}
+.FooterButtonActive--Hufflepuff {
+  background-color: #ffed86;
+}
+.FooterButtonActive--Ravenclaw {
+  background-color: #222f5b;
+}
+.FooterButtonActive--Slytherin {
+  background-color: #2a623d;
 }
