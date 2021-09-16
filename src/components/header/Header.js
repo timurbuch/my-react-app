@@ -3,7 +3,7 @@ import "./Header.css";
 function Header({ buttonState }) {
   return (
     <header>
-      <h1>
+      <h1 className="title">
         {buttonState === "All"
           ? "Harry Potter Collectible Cards"
           : buttonState === ""
