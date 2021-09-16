@@ -1,9 +1,20 @@
 .navIcon {
   height: 7vh;
   width: auto;
-  background-color: lightgray;
 }
 .navLink {
   background: transparent;
   border: none;
+}
+.FooterButtonActive--Gryffindor {
+  background-color: #ae0001;
+}
+.FooterButtonActive--Hufflepuff {
+  background-color: #ffed86;
+}
+.FooterButtonActive--Ravenclaw {
+  background-color: #222f5b;
+}
+.FooterButtonActive--Slytherin {
+  background-color: #2a623d;
 }

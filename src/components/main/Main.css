@@ -2,10 +2,82 @@
   min-height: 100vh;
   padding-top: 17vh;
   padding-bottom: 17vh;
-  background-color: lightblue;
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   justify-items: center;
   gap: 2rem;
+}
+.main--gryffindor {
+  background-image: linear-gradient(
+    45deg,
+    #740001 16.67%,
+    #d3a625 16.67%,
+    #d3a625 33.33%,
+    #ae0001 33.33%,
+    #ae0001 50%,
+    #740001 50%,
+    #740001 66.67%,
+    #d3a625 66.67%,
+    #d3a625 83.33%,
+    #ae0001 83.33%,
+    #ae0001 100%
+  );
+}
+.main--hufflepuff {
+  background-image: linear-gradient(
+    45deg,
+    #fff4b1 12.5%,
+    #ffdb00 12.5%,
+    #ffdb00 25%,
+    #000000 25%,
+    #000000 37.5%,
+    #60605c 37.5%,
+    #60605c 50%,
+    #fff4b1 50%,
+    #fff4b1 62.5%,
+    #ffdb00 62.5%,
+    #ffdb00 75%,
+    #000000 75%,
+    #000000 87.5%,
+    #60605c 87.5%,
+    #60605c 100%
+  );
+}
+.main--ravenclaw {
+  background-image: linear-gradient(
+    45deg,
+    #0e1a40 16.67%,
+    #5d5d5d 16.67%,
+    #5d5d5d 33.33%,
+    #946b2d 33.33%,
+    #946b2d 50%,
+    #0e1a40 50%,
+    #0e1a40 66.67%,
+    #5d5d5d 66.67%,
+    #5d5d5d 83.33%,
+    #946b2d 83.33%,
+    #946b2d 100%
+  );
+}
+.main--slytherin {
+  background-image: linear-gradient(
+    45deg,
+    #1a472a 12.5%,
+    #2a623d 12.5%,
+    #2a623d 25%,
+    #aaaaaa 25%,
+    #aaaaaa 37.5%,
+    #000000 37.5%,
+    #000000 50%,
+    #1a472a 50%,
+    #1a472a 62.5%,
+    #2a623d 62.5%,
+    #2a623d 75%,
+    #aaaaaa 75%,
+    #aaaaaa 87.5%,
+    #000000 87.5%,
+    #000000 100%
+  );
 }
