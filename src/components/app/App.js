@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "../header/Header.js";
 import Footer from "../footer/Footer";
 import Main from "../main/Main";
@@ -19,6 +19,9 @@ function App() {
       return JSON.parse(localStorage.getItem("storedFavorites"));
     }
   });
+  useEffect(() => {
+    localStorage.setItem("storedFavorites", JSON.stringify(favorites));
+  }, [favorites]);
   const favoriteHandler = (characterName) => {
     if (favorites.find((favorite) => favorite === characterName) == null) {
       setFavorites((arr) => [...arr, characterName]);
@@ -27,8 +30,8 @@ function App() {
         arr.filter((favorite) => favorite !== characterName)
       );
     }
-    let storageArray = favorites;
-    localStorage.setItem("storedFavorites", JSON.stringify(storageArray));
+    //let storageArray = favorites;
+    //localStorage.setItem("storedFavorites", JSON.stringify(storageArray));
   };
 
   const buttonStateHandler = (input) => {
