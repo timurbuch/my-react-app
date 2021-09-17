@@ -1,5 +1,6 @@
 header {
   position: fixed;
+
   top: 0;
   background-color: rgb(255, 255, 255);
   height: 15vh;
@@ -7,4 +8,7 @@ header {
   width: 100vw;
   text-align: center;
   border-bottom: darkgray 1px ridge;
+}
+.title {
+  margin-top: 1em;
 }

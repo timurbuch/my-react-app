@@ -1,9 +1,15 @@
 import "./Header.css";
 
-function Header() {
+function Header({ buttonState }) {
   return (
     <header>
-      <h1>Harry Potter Collectible Cards</h1>
+      <h1 className="title">
+        {buttonState === "All"
+          ? "Harry Potter Collectible Cards"
+          : buttonState === ""
+          ? "Neutral"
+          : buttonState}
+      </h1>
     </header>
   );
 }

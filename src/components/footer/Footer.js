@@ -1,18 +1,14 @@
 import "./Footer.css";
 import "../navlink/NavLink";
-import { useState } from "react";
 import NavLink from "../navlink/NavLink";
 import gIcon from "../../assets/alpha-g-circle-outline.svg";
 import hIcon from "../../assets/alpha-h-circle-outline.svg";
 import rIcon from "../../assets/alpha-r-circle-outline.svg";
 import sIcon from "../../assets/alpha-s-circle-outline.svg";
+import nIcon from "../../assets/alpha-n-circle-outline.svg";
 
-function Footer() {
-  const [buttonState, setButtonState] = useState("");
-
-  const buttonStateHandler = (input) => {
-    setButtonState(input);
-  };
+function Footer(props) {
+  const buttonStateHandler = props.buttonStateHandler;
 
   return (
     <footer>
@@ -20,7 +16,9 @@ function Footer() {
         src={gIcon}
         ariaLabel="Gryffindor"
         className={
-          buttonState === "Gryffindor" ? "FooterButtonActive--Gryffindor" : ""
+          props.buttonState === "Gryffindor"
+            ? "FooterButtonActive--Gryffindor"
+            : ""
         }
         onClick={() => buttonStateHandler("Gryffindor")}
       />
@@ -28,7 +26,9 @@ function Footer() {
         src={hIcon}
         ariaLabel="Hufflepuff"
         className={
-          buttonState === "Hufflepuff" ? "FooterButtonActive--Hufflepuff" : ""
+          props.buttonState === "Hufflepuff"
+            ? "FooterButtonActive--Hufflepuff"
+            : ""
         }
         onClick={() => buttonStateHandler("Hufflepuff")}
       />
@@ -36,7 +36,9 @@ function Footer() {
         src={rIcon}
         ariaLabel="Ravenclaw"
         className={
-          buttonState === "Ravenclaw" ? "FooterButtonActive--Ravenclaw" : ""
+          props.buttonState === "Ravenclaw"
+            ? "FooterButtonActive--Ravenclaw"
+            : ""
         }
         onClick={() => buttonStateHandler("Ravenclaw")}
       />
@@ -44,9 +46,19 @@ function Footer() {
         src={sIcon}
         ariaLabel="Slytherin"
         className={
-          buttonState === "Slytherin" ? "FooterButtonActive--Slytherin" : ""
+          props.buttonState === "Slytherin"
+            ? "FooterButtonActive--Slytherin"
+            : ""
         }
         onClick={() => buttonStateHandler("Slytherin")}
+      />
+      <NavLink
+        src={nIcon}
+        ariaLabel="Neutral"
+        className={
+          props.buttonState === "" ? "FooterButtonActive--Neutral" : ""
+        }
+        onClick={() => buttonStateHandler("")}
       />
     </footer>
   );

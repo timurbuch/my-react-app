@@ -24,6 +24,7 @@
     #ae0001 83.33%,
     #ae0001 100%
   );
+  background-size: 25%;
 }
 .main--hufflepuff {
   background-image: linear-gradient(
@@ -44,6 +45,7 @@
     #60605c 87.5%,
     #60605c 100%
   );
+  background-size: 25%;
 }
 .main--ravenclaw {
   background-image: linear-gradient(
@@ -60,6 +62,7 @@
     #946b2d 83.33%,
     #946b2d 100%
   );
+  background-size: 25%;
 }
 .main--slytherin {
   background-image: linear-gradient(
@@ -80,4 +83,5 @@
     #000000 87.5%,
     #000000 100%
   );
+  background-size: 25%;
 }
