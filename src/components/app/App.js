@@ -30,8 +30,6 @@ function App() {
         arr.filter((favorite) => favorite !== characterName)
       );
     }
-    //let storageArray = favorites;
-    //localStorage.setItem("storedFavorites", JSON.stringify(storageArray));
   };
 
   const buttonStateHandler = (input) => {
