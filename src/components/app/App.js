@@ -5,15 +5,45 @@ import Footer from "../footer/Footer";
 import Main from "../main/Main";
 
 function App() {
-  const [buttonState, setButtonState] = useState("All");
+  const [buttonState, setButtonState] = useState(() => {
+    if (localStorage.getItem("storedHouse") === null) {
+      return "All";
+    } else {
+      return JSON.parse(localStorage.getItem("storedHouse"));
+    }
+  });
+  const [favorites, setFavorites] = useState(() => {
+    if (localStorage.getItem("storedFavorites") === null) {
+      return [];
+    } else {
+      return JSON.parse(localStorage.getItem("storedFavorites"));
+    }
+  });
+  const favoriteHandler = (characterName) => {
+    if (favorites.find((favorite) => favorite === characterName) == null) {
+      setFavorites((arr) => [...arr, characterName]);
+    } else {
+      setFavorites((arr) =>
+        arr.filter((favorite) => favorite !== characterName)
+      );
+    }
+    let storageArray = favorites;
+    localStorage.setItem("storedFavorites", JSON.stringify(storageArray));
+  };
+
   const buttonStateHandler = (input) => {
+    localStorage.setItem("storedHouse", JSON.stringify(input));
     setButtonState(input);
   };
 
   return (
     <div className="App">
       <Header buttonState={buttonState} />
-      <Main buttonState={buttonState} />
+      <Main
+        buttonState={buttonState}
+        favorites={favorites}
+        favoriteHandler={favoriteHandler}
+      />
       <Footer
         buttonState={buttonState}
         buttonStateHandler={buttonStateHandler}
