@@ -46,6 +46,8 @@ function Main(props) {
               dateOfBirth={character.dateOfBirth}
               house={character.house}
               patronus={character.patronus}
+              favorites={props.favorites}
+              favoriteHandler={props.favoriteHandler}
             />
           ))
       ) : (

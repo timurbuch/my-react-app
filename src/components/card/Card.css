@@ -3,7 +3,7 @@
   max-width: 80vw;
   display: flex;
   flex-direction: column;
-  background-color: lightgray;
+  background-color: rgba(211, 211, 211, 0.7);
   border: 1px solid black;
   margin-left: 10vw;
   margin-right: 10vw;

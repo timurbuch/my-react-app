@@ -16,6 +16,7 @@ function Card(props) {
       <h2>
         {emoji}
         {props.name}
+        {props.favorites.includes(props.name) ? "⭐️" : ""}
       </h2>
       <h4>{props.house}</h4>
       <section className="flex-wrapper">
@@ -35,6 +36,12 @@ function Card(props) {
             className="showButton"
           >
             Show {!showDetails ? "more" : "less"}
+          </button>
+          <button
+            className="favoriteButton"
+            onClick={() => props.favoriteHandler(props.name)}
+          >
+            {props.favorites.includes(props.name) ? "Unfavor" : "Favor"}
           </button>
         </div>
       </section>
