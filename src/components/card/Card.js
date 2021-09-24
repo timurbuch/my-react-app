@@ -34,7 +34,7 @@ function Card(props) {
               setShowDetails(!showDetails);
             }}
             className="showButton"
-            data-testid="detailButton"
+            role="switch"
           >
             Show {!showDetails ? "more" : "less"}
           </button>
