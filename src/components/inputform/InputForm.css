@@ -1,0 +1,16 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: rgb(118, 135, 152, 0.8);
+  height: 40vh;
+  max-width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.submitButton {
+  width: fit-content;
+  align-self: center;
+}

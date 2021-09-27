@@ -11,7 +11,7 @@ function Card(props) {
   };
 
   return (
-    <div className="card">
+    <div className="card" data-testid="card">
       <EmojiBar handleEmojiCLick={handleEmojiCLick} />
       <h2>
         {emoji}
@@ -34,6 +34,7 @@ function Card(props) {
               setShowDetails(!showDetails);
             }}
             className="showButton"
+            role="switch"
           >
             Show {!showDetails ? "more" : "less"}
           </button>

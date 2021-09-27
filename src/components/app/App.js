@@ -12,6 +12,7 @@ function App() {
       return JSON.parse(localStorage.getItem("storedHouse"));
     }
   });
+
   const [favorites, setFavorites] = useState(() => {
     if (localStorage.getItem("storedFavorites") === null) {
       return [];
@@ -19,9 +20,12 @@ function App() {
       return JSON.parse(localStorage.getItem("storedFavorites"));
     }
   });
+  const [customCharacters, setCustomCharacters] = useState([]);
+
   useEffect(() => {
     localStorage.setItem("storedFavorites", JSON.stringify(favorites));
   }, [favorites]);
+
   const favoriteHandler = (characterName) => {
     if (favorites.find((favorite) => favorite === characterName) == null) {
       setFavorites((arr) => [...arr, characterName]);
@@ -36,6 +40,18 @@ function App() {
     localStorage.setItem("storedHouse", JSON.stringify(input));
     setButtonState(input);
   };
+  const inputHandler = (name, house, gender, dateOfBirth, patronus) => {
+    setCustomCharacters([
+      ...customCharacters,
+      {
+        name: name,
+        house: house,
+        gender: gender,
+        dateOfBirth: dateOfBirth,
+        patronus: patronus,
+      },
+    ]);
+  };
 
   return (
     <div className="App">
@@ -44,6 +60,8 @@ function App() {
         buttonState={buttonState}
         favorites={favorites}
         favoriteHandler={favoriteHandler}
+        customCharacters={customCharacters}
+        onInput={inputHandler}
       />
       <Footer
         buttonState={buttonState}
